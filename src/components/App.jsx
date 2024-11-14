@@ -178,11 +178,7 @@ function App() {
       </div>
 
       <footer className="footer">
-        <img
-          className="logoSponsor"
-          src="./images/adalab.png"
-          alt="Logo Adalab"
-        />
+        <img className="logoSponsor" src={adalab} alt="Logo Adalab" />
       </footer>
 
       {/* <header class="header">
