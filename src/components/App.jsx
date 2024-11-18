@@ -6,35 +6,39 @@ import { useState } from "react";
 
 function App() {
   //Nombre proyecto
-  const [nameProyect, setNameProyect] = useState("");
+  const [nameProyect, setNameProyect] = useState("Elegant workspace");
+
+  const handleNameProyect = (event) => {
+    setNameProyect(event.target.value);
+    
+  };
 
   //Slogan
-  const [slogan, setSlogan] = useState("");
+  const [slogan, setSlogan] = useState("Diseños exclusivos");
 
   //Repositorio
-  const [repo, setRepo] = useState("");
+  const [repo, setRepo] = useState("GitHub link");
 
   //Demo
-  const [demo, setDemo] = useState("");
+  const [demo, setDemo] = useState("Web link");
 
   //Tecnologias
-  const [tech, setTech] = useState("");
+  const [tech, setTech] = useState("React JS - HTML - CSS");
 
   //Descripcion
-  const [description, setDescription] = useState("");
+  const [description, setDescription] = useState("lorem");
 
   //Nombre autora
-  const [name, setName] = useState("");
+  const [name, setName] = useState("Emmelie Bjôrklund");
 
   //trabajo autora
-  const [job, setJob] = useState("");
-
+  const [job, setJob] = useState("Full stack Developer");
 
   return (
     <>
       <div className="container">
         <Header />
-        <Main />
+        <Main nameProyect={nameProyect} />
       </div>
       <Footer />
 
