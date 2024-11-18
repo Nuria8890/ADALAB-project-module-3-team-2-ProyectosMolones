@@ -1,13 +1,12 @@
 import "../styles/App.scss";
 import Header from "./Header";
-
-import adalab from "../images/adalab.png";
+import Footer from "./Footer";
 
 function App() {
   return (
     <>
       <div className="container">
-       <Header/>
+        <Header />
 
         <main className="main">
           <section className="hero">
@@ -163,10 +162,7 @@ function App() {
           </form>
         </main>
       </div>
-
-      <footer className="footer">
-        <img className="logoSponsor" src={adalab} alt="Logo Adalab" />
-      </footer>
+      <Footer />
 
       {/* <header class="header">
       <a href="./">
