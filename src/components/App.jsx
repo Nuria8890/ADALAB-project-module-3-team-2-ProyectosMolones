@@ -1,26 +1,13 @@
 import "../styles/App.scss";
-import laptopCodeSolid from "../images/laptop-code-solid.svg";
+import Header from "./Header";
+
 import adalab from "../images/adalab.png";
 
 function App() {
   return (
     <>
       <div className="container">
-        <header className="header">
-          <a
-            className="header__brand"
-            href="./"
-            title="Haz click para volver a la página inicial"
-          >
-            <img
-              className="header__companyLogo"
-              src={laptopCodeSolid}
-              alt="Logo proyectos molones"
-            />
-            <h1 className="header__title">Proyectos molones</h1>
-          </a>
-          <img className="logoSponsor" src={adalab} alt="Logo Adalab" />
-        </header>
+       <Header/>
 
         <main className="main">
           <section className="hero">
