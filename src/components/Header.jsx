@@ -1,5 +1,6 @@
 import laptopCodeSolid from "../images/laptop-code-solid.svg";
 import Logo from "./Logo";
+import "../styles/layout/Header.scss";
 
 function Header() {
   return (
@@ -16,7 +17,7 @@ function Header() {
         />
         <h1 className="header__title">Proyectos molones</h1>
       </a>
-     <Logo/>
+      <Logo />
     </header>
   );
 }
