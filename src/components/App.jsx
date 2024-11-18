@@ -2,8 +2,34 @@ import "../styles/App.scss";
 import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
+import { useState } from "react";
 
 function App() {
+  //Nombre proyecto
+  const [nameProyect, setNameProyect] = useState("");
+
+  //Slogan
+  const [slogan, setSlogan] = useState("");
+
+  //Repositorio
+  const [repo, setRepo] = useState("");
+
+  //Demo
+  const [demo, setDemo] = useState("");
+
+  //Tecnologias
+  const [tech, setTech] = useState("");
+
+  //Descripcion
+  const [description, setDescription] = useState("");
+
+  //Nombre autora
+  const [name, setName] = useState("");
+
+  //trabajo autora
+  const [job, setJob] = useState("");
+
+
   return (
     <>
       <div className="container">
