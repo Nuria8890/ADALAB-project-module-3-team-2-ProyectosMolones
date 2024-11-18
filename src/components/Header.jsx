@@ -1,5 +1,5 @@
 import laptopCodeSolid from "../images/laptop-code-solid.svg";
-import adalab from "../images/adalab.png";
+import Logo from "./Logo";
 
 function Header() {
   return (
@@ -16,7 +16,7 @@ function Header() {
         />
         <h1 className="header__title">Proyectos molones</h1>
       </a>
-      <img className="logoSponsor" src={adalab} alt="Logo Adalab" />
+     <Logo/>
     </header>
   );
 }
