@@ -9,7 +9,7 @@ function Main(props) {
     <main className="main">
       <Hero />
 
-      <Preview nameProyect={props.nameProyect} />
+      <Preview nameProject={props.nameProject} />
 
       <Form onChangeInput={props.onChangeInput} />
     </main>
@@ -20,7 +20,7 @@ export default Main;
 
 Main.propTypes = {
   onChangeInput: PropTypes.func.isRequired,
-  nameProyect: PropTypes.string.isRequired,
+  nameProject: PropTypes.string.isRequired,
   slogan: PropTypes.string.isRequired,
   repo: PropTypes.string.isRequired,
   demo: PropTypes.string.isRequired,

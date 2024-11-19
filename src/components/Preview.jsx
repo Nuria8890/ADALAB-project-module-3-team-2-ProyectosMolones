@@ -18,9 +18,9 @@ function Preview(props) {
         </div>
 
         <div className="card__project">
-          <h3 className="card__name">{props.nameProyect}</h3>
+          <h3 className="card__name">{props.nameProject}</h3>
           <p className="card__slogan">{props.slogan}</p>
-          <h3 className="card__descriptionTitle">{props.nameProyect}</h3>
+          <h3 className="card__descriptionTitle">{props.nameProject}</h3>
           <p className="card__description">{props.description}</p>
 
           <div className="card__technicalInfo">
@@ -50,7 +50,7 @@ function Preview(props) {
 export default Preview;
 
 Preview.propTypes = {
-  nameProyect: PropTypes.string.isRequired,
+  nameProject: PropTypes.string.isRequired,
   slogan: PropTypes.string.isRequired,
   repo: PropTypes.string.isRequired,
   demo: PropTypes.string.isRequired,

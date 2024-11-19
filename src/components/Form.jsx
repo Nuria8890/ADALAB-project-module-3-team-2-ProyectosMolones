@@ -13,7 +13,7 @@ function Form(props) {
           className="addForm__input"
           type="text"
           name="name"
-          id="name-proyect"
+          id="nameProject"
           placeholder="Nombre del proyecto"
           onChange={handleChangeInput}
         />
@@ -104,7 +104,7 @@ export default Form;
 
 Form.propTypes = {
   onChangeInput: PropTypes.func.isRequired,
-  formNameProyect: PropTypes.string.isRequired,
+  formnameProject: PropTypes.string.isRequired,
   formSlogan: PropTypes.string.isRequired,
   formRepo: PropTypes.string.isRequired,
   formDemo: PropTypes.string.isRequired,

@@ -6,7 +6,7 @@ import { useState } from "react";
 
 function App() {
   //Nombre proyecto
-  const [nameProyect, setNameProyect] = useState("Elegant workspace");
+  const [nameProject, setnameProject] = useState("Elegant workspace");
 
   //Slogan
   const [slogan, setSlogan] = useState("Diseños exclusivos");
@@ -30,14 +30,14 @@ function App() {
   const [job, setJob] = useState("Full stack Developer");
 
   const handleValuesProyect = (value, id) => {
-    setNameProyect(value);
+    setnameProject(value);
   };
 
   return (
     <>
       <div className="container">
         <Header />
-        <Main nameProyect={nameProyect} onChangeInput={handleValuesProyect} />
+        <Main nameProject={nameProject} onChangeInput={handleValuesProyect} />
       </div>
       <Footer />
     </>
