@@ -23,6 +23,7 @@ function Form(props) {
           name="slogan"
           id="slogan"
           placeholder="Slogan"
+          onChange={handleChangeInput}
         />
         <div className="addForm__2col">
           <input
@@ -31,6 +32,7 @@ function Form(props) {
             name="repo"
             id="repo"
             placeholder="Repositorio"
+            onChange={handleChangeInput}
           />
           <input
             className="addForm__input"
@@ -38,6 +40,7 @@ function Form(props) {
             name="demo"
             id="demo"
             placeholder="Demo"
+            onChange={handleChangeInput}
           />
         </div>
         <input
@@ -46,6 +49,7 @@ function Form(props) {
           name="technologies"
           id="technologies"
           placeholder="Tecnologías"
+          onChange={handleChangeInput}
         />
         <textarea
           className="addForm__input"
@@ -54,6 +58,7 @@ function Form(props) {
           id="desc"
           placeholder="Descripción"
           rows="5"
+          onChange={handleChangeInput}
         ></textarea>
       </fieldset>
 
@@ -65,6 +70,7 @@ function Form(props) {
           name="autor"
           id="autor"
           placeholder="Nombre"
+          onChange={handleChangeInput}
         />
         <input
           className="addForm__input"
@@ -72,6 +78,7 @@ function Form(props) {
           name="job"
           id="job"
           placeholder="Trabajo"
+          onChange={handleChangeInput}
         />
       </fieldset>
 
@@ -104,12 +111,4 @@ export default Form;
 
 Form.propTypes = {
   onChangeInput: PropTypes.func.isRequired,
-  formnameProject: PropTypes.string.isRequired,
-  formSlogan: PropTypes.string.isRequired,
-  formRepo: PropTypes.string.isRequired,
-  formDemo: PropTypes.string.isRequired,
-  formTech: PropTypes.string.isRequired,
-  formDescription: PropTypes.string.isRequired,
-  formName: PropTypes.string.isRequired,
-  formJob: PropTypes.string.isRequired,
 };

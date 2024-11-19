@@ -9,7 +9,16 @@ function Main(props) {
     <main className="main">
       <Hero />
 
-      <Preview nameProject={props.nameProject} />
+      <Preview
+        nameProject={props.nameProject}
+        slogan={props.slogan}
+        repo={props.repo}
+        demo={props.demo}
+        tech={props.tech}
+        description={props.description}
+        autor={props.autor}
+        job={props.job}
+      />
 
       <Form onChangeInput={props.onChangeInput} />
     </main>
@@ -26,6 +35,6 @@ Main.propTypes = {
   demo: PropTypes.string.isRequired,
   tech: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
+  autor: PropTypes.string.isRequired,
   job: PropTypes.string.isRequired,
 };

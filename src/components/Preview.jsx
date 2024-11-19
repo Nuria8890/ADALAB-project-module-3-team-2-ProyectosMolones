@@ -14,13 +14,13 @@ function Preview(props) {
         <div className="card__author">
           <div className="card__authorPhoto"></div>
           <p className="card__job">{props.job}</p>
-          <h3 className="card__name">{props.name}</h3>
+          <h3 className="card__name">{props.autor}</h3>
         </div>
 
         <div className="card__project">
           <h3 className="card__name">{props.nameProject}</h3>
           <p className="card__slogan">{props.slogan}</p>
-          <h3 className="card__descriptionTitle">{props.nameProject}</h3>
+          {/* <h3 className="card__descriptionTitle">{props.nameProject}</h3> */}
           <p className="card__description">{props.description}</p>
 
           <div className="card__technicalInfo">
@@ -56,6 +56,6 @@ Preview.propTypes = {
   demo: PropTypes.string.isRequired,
   tech: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
+  autor: PropTypes.string.isRequired,
   job: PropTypes.string.isRequired,
 };

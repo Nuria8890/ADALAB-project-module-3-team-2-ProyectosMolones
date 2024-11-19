@@ -24,20 +24,45 @@ function App() {
   const [description, setDescription] = useState("lorem");
 
   //Nombre autora
-  const [name, setName] = useState("Emmelie Bjôrklund");
+  const [autor, setAutor] = useState("Emmelie Bjôrklund");
 
   //trabajo autora
   const [job, setJob] = useState("Full stack Developer");
 
   const handleValuesProyect = (value, id) => {
-    setnameProject(value);
+    if (id === "nameProject") {
+      setnameProject(value);
+    } else if (id === "slogan") {
+      setSlogan(value);
+    } else if (id === "repo") {
+      setRepo(value);
+    } else if (id === "demo") {
+      setDemo(value);
+    } else if (id === "technologies") {
+      setTech(value);
+    } else if (id === "desc") {
+      setDescription(value);
+    } else if (id === "autor") {
+      setAutor(value);
+    } else if (id === "job") {
+      setJob(value);
+    }
   };
-
   return (
     <>
       <div className="container">
         <Header />
-        <Main nameProject={nameProject} onChangeInput={handleValuesProyect} />
+        <Main
+          nameProject={nameProject}
+          slogan={slogan}
+          repo={repo}
+          demo={demo}
+          tech={tech}
+          description={description}
+          autor={autor}
+          job={job}
+          onChangeInput={handleValuesProyect}
+        />
       </div>
       <Footer />
     </>
