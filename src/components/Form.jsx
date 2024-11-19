@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 
-function Form(props) {
+function Form({ onChangeInput }) {
   const handleChangeInput = (event) => {
-    props.onChangeInput(event.target.value, event.target.id);
+    onChangeInput(event.target.value, event.target.id);
   };
   return (
     <form className="addForm">

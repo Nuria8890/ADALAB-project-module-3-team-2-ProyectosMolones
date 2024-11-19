@@ -1,6 +1,15 @@
 import PropTypes from "prop-types";
 
-function Preview(props) {
+function Preview({
+  nameProject,
+  slogan,
+  repo,
+  demo,
+  tech,
+  description,
+  autor,
+  job,
+}) {
   return (
     <section className="preview">
       <div className="projectImage"></div>
@@ -13,33 +22,31 @@ function Preview(props) {
 
         <div className="card__author">
           <div className="card__authorPhoto"></div>
-          <p className="card__job">{props.job}</p>
-          <h3 className="card__name">{props.autor}</h3>
+          <p className="card__job">{job}</p>
+          <h3 className="card__name">{autor}</h3>
         </div>
 
         <div className="card__project">
-          <h3 className="card__name">{props.nameProject}</h3>
-          <p className="card__slogan">{props.slogan}</p>
-          {/* <h3 className="card__descriptionTitle">{props.nameProject}</h3> */}
-          <p className="card__description">{props.description}</p>
+          <h3 className="card__name">{nameProject}</h3>
+          <p className="card__slogan">{slogan}</p>
+          {/* <h3 className="card__descriptionTitle">{nameProject}</h3> */}
+          <p className="card__description">{description}</p>
 
           <div className="card__technicalInfo">
-            <p className="card__technologies">{props.tech}</p>
+            <p className="card__technologies">{tech}</p>
 
             <a
               className="icon icon__www"
-              href="#"
+              href={demo}
+              target="_blank"
               title="Haz click para ver el proyecto online"
-            >
-              {props.demo}
-            </a>
+            ></a>
             <a
               className="icon icon__github"
-              href="#"
+              href={repo}
+              target="_blank"
               title="Haz click para ver el código del proyecto"
-            >
-              {props.repo}
-            </a>
+            ></a>
           </div>
         </div>
       </article>

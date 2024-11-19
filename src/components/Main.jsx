@@ -4,23 +4,33 @@ import Form from "./Form";
 import Hero from "./Hero";
 import Preview from "./Preview";
 
-function Main(props) {
+function Main({
+  nameProject,
+  slogan,
+  repo,
+  demo,
+  tech,
+  description,
+  autor,
+  job,
+  onChangeInput,
+}) {
   return (
     <main className="main">
       <Hero />
 
       <Preview
-        nameProject={props.nameProject}
-        slogan={props.slogan}
-        repo={props.repo}
-        demo={props.demo}
-        tech={props.tech}
-        description={props.description}
-        autor={props.autor}
-        job={props.job}
+        nameProject={nameProject}
+        slogan={slogan}
+        repo={repo}
+        demo={demo}
+        tech={tech}
+        description={description}
+        autor={autor}
+        job={job}
       />
 
-      <Form onChangeInput={props.onChangeInput} />
+      <Form onChangeInput={onChangeInput} />
     </main>
   );
 }

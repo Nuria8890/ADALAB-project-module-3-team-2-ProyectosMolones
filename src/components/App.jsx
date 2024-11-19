@@ -21,7 +21,9 @@ function App() {
   const [tech, setTech] = useState("React JS - HTML - CSS");
 
   //Descripcion
-  const [description, setDescription] = useState("lorem");
+  const [description, setDescription] = useState(
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, dolorem mollitia. Ullam aliquid, impedit modi porro quis necessitatibus nemo voluptatum molestias quae est perspiciatis placeat sit quas doloremque error nobis."
+  );
 
   //Nombre autora
   const [autor, setAutor] = useState("Emmelie Bjôrklund");
