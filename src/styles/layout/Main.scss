@@ -35,7 +35,7 @@
   aspect-ratio: 1 / 1;
   outline: solid 1px pink;
 
-  background-image: url("../../images/ebook-example.jpg");
+  background-image: url("../../images/apuntes-tablet.jpg");
   background-position: top center;
   background-size: cover;
 }
@@ -173,7 +173,7 @@
   background-image: radial-gradient(
     circle at 50% 50%,
     var(--color-dusk),
-    #211e2e 92%
+    #0f201e 92%
   );
 }
 
@@ -207,10 +207,10 @@
   background-image: linear-gradient(
     to left,
     transparent,
-    #343045 25%,
-    #c0b7e8 45%,
+    #1d766b 45%,
+    #086f83 45%,
     var(--color-dark-lilac) 65%,
-    #343045 75%,
+    #1d766b 75%,
     transparent
   );
 }
@@ -266,8 +266,6 @@
   text-transform: capitalize;
 }
 
-
-
 .button--link {
   display: block;
   width: fit-content;
@@ -312,7 +310,7 @@
   background-image: linear-gradient(
     to right,
     var(--color-dark-lilac) -2%,
-    #c0b7e8 98%
+    #07423b 98%
   );
 
   cursor: pointer;
@@ -336,7 +334,7 @@
   background-image: linear-gradient(
     to right,
     var(--color-dark-lilac) -2%,
-    #c0b7e8 98%
+    #07423b 98%
   );
 
   cursor: pointer;
