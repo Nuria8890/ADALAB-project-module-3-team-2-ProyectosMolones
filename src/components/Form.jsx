@@ -31,7 +31,7 @@ function Form({ onChangeInput }) {
             type="url"
             name="repo"
             id="repo"
-            placeholder="Repositorio"
+            placeholder="Repositorio (copia y pega la url)"
             onChange={handleChangeInput}
           />
           <input
@@ -39,7 +39,7 @@ function Form({ onChangeInput }) {
             type="url"
             name="demo"
             id="demo"
-            placeholder="Demo"
+            placeholder="Demo (copia y pega la url)"
             onChange={handleChangeInput}
           />
         </div>
