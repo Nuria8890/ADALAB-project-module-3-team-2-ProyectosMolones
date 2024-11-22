@@ -5,14 +5,7 @@ import Hero from "./Hero";
 import Preview from "./Preview";
 
 function Main({
-  nameProject,
-  slogan,
-  repo,
-  demo,
-  tech,
-  description,
-  autor,
-  job,
+  projectInfo,
   onChangeInput,
 }) {
   return (
@@ -20,14 +13,7 @@ function Main({
       <Hero />
 
       <Preview
-        nameProject={nameProject}
-        slogan={slogan}
-        repo={repo}
-        demo={demo}
-        tech={tech}
-        description={description}
-        autor={autor}
-        job={job}
+        projectInfo={projectInfo}
       />
 
       <Form onChangeInput={onChangeInput} />
@@ -39,12 +25,5 @@ export default Main;
 
 Main.propTypes = {
   onChangeInput: PropTypes.func.isRequired,
-  nameProject: PropTypes.string.isRequired,
-  slogan: PropTypes.string.isRequired,
-  repo: PropTypes.string.isRequired,
-  demo: PropTypes.string.isRequired,
-  tech: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  autor: PropTypes.string.isRequired,
-  job: PropTypes.string.isRequired,
+  projectInfo: PropTypes.object.isRequired
 };
