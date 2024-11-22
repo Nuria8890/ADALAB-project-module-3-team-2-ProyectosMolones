@@ -7,6 +7,7 @@ import { useState } from "react";
 function App() {
 
 
+
   const [projectInfo, setProjectInfo] = useState({
     nameProject: "Elegant workspace",
     slogan: "Diseños Exclusivos",
@@ -22,21 +23,21 @@ function App() {
 
   const handleValuesProyect = (value, id) => {
     if (id === "nameProject") {
-      setnameProject(value);
+      setProjectInfo({ ...projectInfo, nameProject: value });
     } else if (id === "slogan") {
-      setSlogan(value);
+      setProjectInfo({ ...projectInfo, slogan: value });
     } else if (id === "repo") {
-      setRepo(value);
+      setProjectInfo({ ...projectInfo, repo: value });
     } else if (id === "demo") {
-      setDemo(value);
+      setProjectInfo({ ...projectInfo, demo: value });
     } else if (id === "technologies") {
-      setTech(value);
+      setProjectInfo({ ...projectInfo, tech: value });
     } else if (id === "desc") {
-      setDescription(value);
+      setProjectInfo({ ...projectInfo, description: value });
     } else if (id === "autor") {
-      setAutor(value);
+      setProjectInfo({ ...projectInfo, autor: value });
     } else if (id === "job") {
-      setJob(value);
+      setProjectInfo({ ...projectInfo, job: value });
     }
   };
   return (
