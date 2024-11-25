@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 
-function Preview({ projectInfo }) {
+function Preview({ projectInfo, projectImages }) {
   return (
     <section className="preview">
-      <div className="projectImage"></div>
+      <div className="projectImage">{projectImages.imageProject}</div>
       <article className="card">
         <h2 className="card__projectTitle">
           <span className="card__projectTitle--text">
@@ -12,7 +12,7 @@ function Preview({ projectInfo }) {
         </h2>
 
         <div className="card__author">
-          <div className="card__authorPhoto"></div>
+          <div className="card__authorPhoto">{projectImages.imageAutor}</div>
           <p className="card__job">{projectInfo.job}</p>
           <h3 className="card__name">{projectInfo.autor}</h3>
         </div>
@@ -48,4 +48,5 @@ export default Preview;
 
 Preview.propTypes = {
   projectInfo: PropTypes.object.isRequired,
+  projectImages: PropTypes.object.isRequired,
 };

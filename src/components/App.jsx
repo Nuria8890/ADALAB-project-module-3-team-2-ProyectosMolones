@@ -16,6 +16,11 @@ function App() {
     job: "Full stack Developer",
   });
 
+  const [projectImages, setProjectImages] = useState({
+    imageProject: "",
+    imageAutor: "",
+  });
+
   const handleValuesProject = (value, id) => {
     if (id === "nameProject") {
       setProjectInfo({ ...projectInfo, nameProject: value });
@@ -46,6 +51,7 @@ function App() {
         <Header />
         <Main
           projectInfo={projectInfo}
+          projectImages={projectImages}
           onChangeInput={handleValuesProject}
           onSubmitForm={handleSubmitForm}
         />
