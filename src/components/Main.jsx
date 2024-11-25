@@ -7,6 +7,7 @@ import Preview from "./Preview";
 function Main({
   projectInfo,
   onChangeInput,
+  onSubmitForm
 }) {
   return (
     <main className="main">
@@ -16,7 +17,7 @@ function Main({
         projectInfo={projectInfo}
       />
 
-      <Form onChangeInput={onChangeInput} />
+      <Form onChangeInput={onChangeInput} onSubmitForm={onSubmitForm} />
     </main>
   );
 }

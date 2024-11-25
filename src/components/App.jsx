@@ -40,6 +40,11 @@ function App() {
       setProjectInfo({ ...projectInfo, job: value });
     }
   };
+
+  const handleSubmitForm = () => {
+    console.log("click");
+  }
+
   return (
     <>
       <div className="container">
@@ -47,6 +52,7 @@ function App() {
         <Main
           projectInfo={projectInfo}
           onChangeInput={handleValuesProyect}
+          onSubmitForm={handleSubmitForm}
         />
       </div>
       <Footer />

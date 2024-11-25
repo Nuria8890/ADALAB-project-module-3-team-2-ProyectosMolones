@@ -1,9 +1,16 @@
 import PropTypes from "prop-types";
 
-function Form({ onChangeInput }) {
+function Form({ onChangeInput, onSubmitForm }) {
   const handleChangeInput = (event) => {
     onChangeInput(event.target.value, event.target.id);
   };
+
+  const handleSaveProyect = (event) => {
+    event.preventDefault();
+    onSubmitForm()
+
+  }
+
   return (
     <form className="addForm">
       <h2 className="title">Información</h2>
@@ -101,7 +108,7 @@ function Form({ onChangeInput }) {
           name="photo"
           id="photo"
         />
-        <button className="button--large">Guardar proyecto</button>
+        <button onClick={handleSaveProyect} className="button--large">Guardar proyecto</button>
       </fieldset>
     </form>
   );
