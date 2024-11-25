@@ -60,8 +60,8 @@ function Form({ onChangeInput, onSubmitForm }) {
         <textarea
           className="addForm__input"
           type="text"
-          name="desc"
-          id="desc"
+          name="description"
+          id="description"
           placeholder="Descripción"
           rows="5"
           onChange={handleChangeInput}

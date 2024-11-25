@@ -5,23 +5,18 @@ import Footer from "./Footer";
 import { useState } from "react";
 
 function App() {
-
-
-
   const [projectInfo, setProjectInfo] = useState({
     nameProject: "Elegant workspace",
     slogan: "Diseños Exclusivos",
     repo: "GitHub Link",
     demo: "Web Link",
     tech: "React JS - HTML - CSS",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Autem, dolorem mollitia.Ullam aliquid",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Autem, dolorem mollitia.Ullam aliquid",
     autor: "Emmelie Bjôrklund",
-    job: "Full stack Developer"
+    job: "Full stack Developer",
+  });
 
-
-  })
-
-  const handleValuesProyect = (value, id) => {
+  const handleValuesProject = (value, id) => {
     if (id === "nameProject") {
       setProjectInfo({ ...projectInfo, nameProject: value });
     } else if (id === "slogan") {
@@ -32,8 +27,8 @@ function App() {
       setProjectInfo({ ...projectInfo, demo: value });
     } else if (id === "technologies") {
       setProjectInfo({ ...projectInfo, tech: value });
-    } else if (id === "desc") {
-      setProjectInfo({ ...projectInfo, description: value });
+    } else if (id === "description") {
+      setProjectInfo({ ...projectInfo, desc: value });
     } else if (id === "autor") {
       setProjectInfo({ ...projectInfo, autor: value });
     } else if (id === "job") {
@@ -43,7 +38,7 @@ function App() {
 
   const handleSubmitForm = () => {
     console.log("click");
-  }
+  };
 
   return (
     <>
@@ -51,7 +46,7 @@ function App() {
         <Header />
         <Main
           projectInfo={projectInfo}
-          onChangeInput={handleValuesProyect}
+          onChangeInput={handleValuesProject}
           onSubmitForm={handleSubmitForm}
         />
       </div>
