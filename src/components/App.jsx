@@ -1,4 +1,6 @@
 import "../styles/App.scss";
+import imgProject from "../images/apuntes-tablet.jpg";
+import imgAutor from "../images/mujer_tech2.png";
 import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
@@ -17,8 +19,8 @@ function App() {
   });
 
   const [projectImages, setProjectImages] = useState({
-    imageProject: "",
-    imageAutor: "",
+    imageProject: imgProject,
+    imageAutor: imgAutor,
   });
 
   const handleValuesProject = (value, id) => {
