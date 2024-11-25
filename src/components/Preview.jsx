@@ -3,7 +3,10 @@ import PropTypes from "prop-types";
 function Preview({ projectInfo, projectImages }) {
   return (
     <section className="preview">
-      <div className="projectImage">{projectImages.imageProject}</div>
+      <div
+        className="projectImage"
+        style={{ backgroundImage: `url(${projectImages.imageProject})` }}
+      ></div>
       <article className="card">
         <h2 className="card__projectTitle">
           <span className="card__projectTitle--text">
@@ -12,7 +15,10 @@ function Preview({ projectInfo, projectImages }) {
         </h2>
 
         <div className="card__author">
-          <div className="card__authorPhoto">{projectImages.imageAutor}</div>
+          <div
+            className="card__authorPhoto"
+            style={{ backgroundImage: `url(${projectImages.imageAutor})` }}
+          ></div>
           <p className="card__job">{projectInfo.job}</p>
           <h3 className="card__name">{projectInfo.autor}</h3>
         </div>

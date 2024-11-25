@@ -4,14 +4,24 @@ import Form from "./Form";
 import Hero from "./Hero";
 import Preview from "./Preview";
 
-function Main({ projectInfo, onChangeInput, onSubmitForm, projectImages }) {
+function Main({
+  projectInfo,
+  onChangeInput,
+  onSubmitForm,
+  projectImages,
+  updateAvatar,
+}) {
   return (
     <main className="main">
       <Hero />
 
       <Preview projectInfo={projectInfo} projectImages={projectImages} />
 
-      <Form onChangeInput={onChangeInput} onSubmitForm={onSubmitForm} />
+      <Form
+        onChangeInput={onChangeInput}
+        onSubmitForm={onSubmitForm}
+        updateAvatar={updateAvatar}
+      />
     </main>
   );
 }
@@ -23,4 +33,5 @@ Main.propTypes = {
   projectInfo: PropTypes.object.isRequired,
   onSubmitForm: PropTypes.func.isRequired,
   projectImages: PropTypes.object.isRequired,
+  updateAvatar: PropTypes.func.isRequired,
 };

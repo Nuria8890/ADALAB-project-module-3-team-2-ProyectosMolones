@@ -1,9 +1,17 @@
 import PropTypes from "prop-types";
 import GetAvatar from "./GetAvatar";
 
-function Form({ onChangeInput, onSubmitForm }) {
+function Form({ onChangeInput, onSubmitForm, updateAvatar }) {
   const handleChangeInput = (event) => {
     onChangeInput(event.target.value, event.target.id);
+  };
+
+  const handleChangeImageProject = (image) => {
+    updateAvatar(image, "imageProject");
+  };
+
+  const handleChangeImageAutor = (image) => {
+    updateAvatar(image, "imageAutor");
   };
 
   const handleSaveProyect = (event) => {
@@ -91,22 +99,29 @@ function Form({ onChangeInput, onSubmitForm }) {
 
       <fieldset className="addForm__group--upload">
         <label htmlFor="image" className="button">
-          Subir foto del proyecto
+          <GetAvatar
+            updateAvatar={handleChangeImageProject}
+            text="Subir foto del proyecto"
+          />
         </label>
         <input
           className="addForm__hidden"
           type="file"
-          name="image"
-          id="image"
+          name="imageProject"
+          id="imageProject"
         />
+
         <label htmlFor="photo" className="button">
-          Subir foto de la autora
+          <GetAvatar
+            updateAvatar={handleChangeImageAutor}
+            text="Subir foto de la autora"
+          />
         </label>
         <input
           className="addForm__hidden"
           type="file"
-          name="photo"
-          id="photo"
+          name="imageAutor"
+          id="imageAutor"
         />
         <button onClick={handleSaveProyect} className="button--large">
           Guardar proyecto
@@ -121,4 +136,5 @@ export default Form;
 Form.propTypes = {
   onChangeInput: PropTypes.func.isRequired,
   onSubmitForm: PropTypes.func.isRequired,
+  updateAvatar: PropTypes.func.isRequired,
 };

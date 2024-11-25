@@ -41,6 +41,14 @@ function App() {
     }
   };
 
+  const handleUpdateImages = (img, id) => {
+    if (id === "imageProject") {
+      setProjectImages({ ...projectImages, imageProject: img });
+    } else if (id === "imageAutor") {
+      setProjectImages({ ...projectImages, imageAutor: img });
+    }
+  };
+
   const handleSubmitForm = () => {
     console.log("click");
   };
@@ -52,6 +60,7 @@ function App() {
         <Main
           projectInfo={projectInfo}
           projectImages={projectImages}
+          updateAvatar={handleUpdateImages}
           onChangeInput={handleValuesProject}
           onSubmitForm={handleSubmitForm}
         />

@@ -70,7 +70,7 @@ function GetAvatar({ updateAvatar, text }) {
 
       <div
         className="get-avatar__preview"
-        style={{ backgroundImage: `url(${avatar})` }}
+        style={{ backgroundImage: "url(../../images/mujer_tech2.png)" }}
       ></div>
     </div>
   );
