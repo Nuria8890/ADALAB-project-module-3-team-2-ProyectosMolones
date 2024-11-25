@@ -4,18 +4,12 @@ import Form from "./Form";
 import Hero from "./Hero";
 import Preview from "./Preview";
 
-function Main({
-  projectInfo,
-  onChangeInput,
-  onSubmitForm
-}) {
+function Main({ projectInfo, onChangeInput, onSubmitForm }) {
   return (
     <main className="main">
       <Hero />
 
-      <Preview
-        projectInfo={projectInfo}
-      />
+      <Preview projectInfo={projectInfo} />
 
       <Form onChangeInput={onChangeInput} onSubmitForm={onSubmitForm} />
     </main>
@@ -26,5 +20,6 @@ export default Main;
 
 Main.propTypes = {
   onChangeInput: PropTypes.func.isRequired,
-  projectInfo: PropTypes.object.isRequired
+  projectInfo: PropTypes.object.isRequired,
+  onSubmitForm: PropTypes.func.isRequired,
 };

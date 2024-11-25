@@ -7,9 +7,8 @@ function Form({ onChangeInput, onSubmitForm }) {
 
   const handleSaveProyect = (event) => {
     event.preventDefault();
-    onSubmitForm()
-
-  }
+    onSubmitForm();
+  };
 
   return (
     <form className="addForm">
@@ -108,7 +107,9 @@ function Form({ onChangeInput, onSubmitForm }) {
           name="photo"
           id="photo"
         />
-        <button onClick={handleSaveProyect} className="button--large">Guardar proyecto</button>
+        <button onClick={handleSaveProyect} className="button--large">
+          Guardar proyecto
+        </button>
       </fieldset>
     </form>
   );
@@ -118,4 +119,5 @@ export default Form;
 
 Form.propTypes = {
   onChangeInput: PropTypes.func.isRequired,
+  onSubmitForm: PropTypes.func.isRequired,
 };
