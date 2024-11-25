@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import GetAvatar from "./GetAvatar";
 
 function Form({ onChangeInput, onSubmitForm }) {
   const handleChangeInput = (event) => {

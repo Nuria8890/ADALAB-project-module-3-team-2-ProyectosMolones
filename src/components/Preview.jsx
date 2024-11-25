@@ -1,9 +1,6 @@
 import PropTypes from "prop-types";
-import GetAvatar from "./GetAvatar";
 
-function Preview({
-  projectInfo
-}) {
+function Preview({ projectInfo }) {
   return (
     <section className="preview">
       <div className="projectImage"></div>
@@ -50,5 +47,5 @@ function Preview({
 export default Preview;
 
 Preview.propTypes = {
-  projectInfo: PropTypes.object.isRequired
+  projectInfo: PropTypes.object.isRequired,
 };
