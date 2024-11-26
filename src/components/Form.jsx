@@ -127,7 +127,9 @@ function Form({ onChangeInput, onSubmitForm, urlCard }) {
           Guardar proyecto
         </button>
       </fieldset>
-      <a className="form__link" href={urlCard}>Ver proyecto</a>
+      <a className="form__link" href={urlCard}>
+        {urlCard}
+      </a>
     </form>
   );
 }
