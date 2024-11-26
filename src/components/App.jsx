@@ -60,12 +60,17 @@ function App() {
       headers: {
         "Content-type": "application/json",
       },
-    }).then((data) => {
-      setUrlCard(data.url);
-      console.log(urlCard);
-    });
+    })
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        console.log("data", data);
+        setUrlCard(data.cardURL);
+        console.log("urlCard", urlCard);
+      });
   };
-
+  console.log("urlCard", urlCard);
   return (
     <>
       <div className="container">

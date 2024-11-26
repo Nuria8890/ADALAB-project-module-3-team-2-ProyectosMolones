@@ -68,10 +68,10 @@ function GetAvatar({ onChangeInput, text }) {
         />
       </label>
 
-      <div
+      {/* <div
         className="get-avatar__preview"
-        style={{ backgroundImage: "url(../../images/mujer_tech2.png)" }}
-      ></div>
+        style={{ backgroundImage: "url(../images/mujer_tech2.png)" }}
+      ></div> */}
     </div>
   );
 }
