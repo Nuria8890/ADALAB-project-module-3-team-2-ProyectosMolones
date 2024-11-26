@@ -5,6 +5,7 @@ import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
 import { useState } from "react";
+// import { Link, Route, Routes } from "react-router-dom";
 
 function App() {
   const [projectInfo, setProjectInfo] = useState({
@@ -16,9 +17,6 @@ function App() {
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Autem, dolorem mollitia.Ullam aliquid",
     autor: "Emmelie Bjôrklund",
     job: "Full stack Developer",
-  });
-
-  const [projectImages, setProjectImages] = useState({
     imageProject: imgProject,
     imageAutor: imgAutor,
   });
@@ -40,14 +38,10 @@ function App() {
       setProjectInfo({ ...projectInfo, autor: value });
     } else if (id === "job") {
       setProjectInfo({ ...projectInfo, job: value });
-    }
-  };
-
-  const handleUpdateImages = (img, id) => {
-    if (id === "imageProject") {
-      setProjectImages({ ...projectImages, imageProject: img });
+    } else if (id === "imageProject") {
+      setProjectInfo({ ...projectInfo, imageProject: value });
     } else if (id === "imageAutor") {
-      setProjectImages({ ...projectImages, imageAutor: img });
+      setProjectInfo({ ...projectInfo, imageAutor: value });
     }
   };
 
@@ -61,8 +55,6 @@ function App() {
         <Header />
         <Main
           projectInfo={projectInfo}
-          projectImages={projectImages}
-          updateAvatar={handleUpdateImages}
           onChangeInput={handleValuesProject}
           onSubmitForm={handleSubmitForm}
         />

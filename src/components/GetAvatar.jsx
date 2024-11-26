@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function GetAvatar({ updateAvatar, text }) {
+function GetAvatar({ onChangeInput, text }) {
   // creamos una propiedad de la clase que es la que vamos a usar en varios métodos para cargar la imagen
   // esto es un manejador de ficheros
   const fr = new FileReader();
@@ -53,7 +53,7 @@ function GetAvatar({ updateAvatar, text }) {
 
     // aquí hago lifting con los datos del fichero
     // lo que haga el componente madre con esta información es otro problema diferente
-    updateAvatar(image);
+    onChangeInput(image);
   };
 
   return (
@@ -77,7 +77,7 @@ function GetAvatar({ updateAvatar, text }) {
 }
 
 GetAvatar.propTypes = {
-  updateAvatar: PropTypes.func.isRequired,
+  onChangeInput: PropTypes.func.isRequired,
   text: PropTypes.string,
 };
 

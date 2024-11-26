@@ -1,17 +1,17 @@
 import PropTypes from "prop-types";
 import GetAvatar from "./GetAvatar";
 
-function Form({ onChangeInput, onSubmitForm, updateAvatar }) {
+function Form({ onChangeInput, onSubmitForm }) {
   const handleChangeInput = (event) => {
     onChangeInput(event.target.value, event.target.id);
   };
 
   const handleChangeImageProject = (image) => {
-    updateAvatar(image, "imageProject");
+    onChangeInput(image, "imageProject");
   };
 
   const handleChangeImageAutor = (image) => {
-    updateAvatar(image, "imageAutor");
+    onChangeInput(image, "imageAutor");
   };
 
   const handleSaveProyect = (event) => {
@@ -100,7 +100,7 @@ function Form({ onChangeInput, onSubmitForm, updateAvatar }) {
       <fieldset className="addForm__group--upload">
         <label htmlFor="image" className="button">
           <GetAvatar
-            updateAvatar={handleChangeImageProject}
+            onChangeInput={handleChangeImageProject}
             text="Subir foto del proyecto"
           />
         </label>
@@ -113,7 +113,7 @@ function Form({ onChangeInput, onSubmitForm, updateAvatar }) {
 
         <label htmlFor="photo" className="button">
           <GetAvatar
-            updateAvatar={handleChangeImageAutor}
+            onChangeInput={handleChangeImageAutor}
             text="Subir foto de la autora"
           />
         </label>
@@ -136,5 +136,4 @@ export default Form;
 Form.propTypes = {
   onChangeInput: PropTypes.func.isRequired,
   onSubmitForm: PropTypes.func.isRequired,
-  updateAvatar: PropTypes.func.isRequired,
 };

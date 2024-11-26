@@ -1,11 +1,11 @@
 import PropTypes from "prop-types";
 
-function Preview({ projectInfo, projectImages }) {
+function Preview({ projectInfo }) {
   return (
     <section className="preview">
       <div
         className="projectImage"
-        style={{ backgroundImage: `url(${projectImages.imageProject})` }}
+        style={{ backgroundImage: `url(${projectInfo.imageProject})` }}
       ></div>
       <article className="card">
         <h2 className="card__projectTitle">
@@ -17,7 +17,7 @@ function Preview({ projectInfo, projectImages }) {
         <div className="card__author">
           <div
             className="card__authorPhoto"
-            style={{ backgroundImage: `url(${projectImages.imageAutor})` }}
+            style={{ backgroundImage: `url(${projectInfo.imageAutor})` }}
           ></div>
           <p className="card__job">{projectInfo.job}</p>
           <h3 className="card__name">{projectInfo.autor}</h3>
@@ -54,5 +54,4 @@ export default Preview;
 
 Preview.propTypes = {
   projectInfo: PropTypes.object.isRequired,
-  projectImages: PropTypes.object.isRequired,
 };
