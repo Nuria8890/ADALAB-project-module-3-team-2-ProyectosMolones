@@ -9,21 +9,23 @@ import { useState } from "react";
 
 function App() {
   const [projectInfo, setProjectInfo] = useState({
-    nameProject: "Elegant workspace",
+    name: "Elegant workspace",
     slogan: "Diseños Exclusivos",
     repo: "GitHub Link",
     demo: "Web Link",
-    tech: "React JS - HTML - CSS",
+    technologies: "React JS - HTML - CSS",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Autem, dolorem mollitia.Ullam aliquid",
     autor: "Emmelie Bjôrklund",
     job: "Full stack Developer",
-    imageProject: imgProject,
-    imageAutor: imgAutor,
+    image: imgProject,
+    photo: imgAutor,
   });
 
+  const [urlCard, setUrlCard] = useState("");
+
   const handleValuesProject = (value, id) => {
-    if (id === "nameProject") {
-      setProjectInfo({ ...projectInfo, nameProject: value });
+    if (id === "name") {
+      setProjectInfo({ ...projectInfo, name: value });
     } else if (id === "slogan") {
       setProjectInfo({ ...projectInfo, slogan: value });
     } else if (id === "repo") {
@@ -31,22 +33,31 @@ function App() {
     } else if (id === "demo") {
       setProjectInfo({ ...projectInfo, demo: value });
     } else if (id === "technologies") {
-      setProjectInfo({ ...projectInfo, tech: value });
-    } else if (id === "description") {
+      setProjectInfo({ ...projectInfo, technologies: value });
+    } else if (id === "desc") {
       setProjectInfo({ ...projectInfo, desc: value });
     } else if (id === "autor") {
       setProjectInfo({ ...projectInfo, autor: value });
     } else if (id === "job") {
       setProjectInfo({ ...projectInfo, job: value });
-    } else if (id === "imageProject") {
-      setProjectInfo({ ...projectInfo, imageProject: value });
-    } else if (id === "imageAutor") {
-      setProjectInfo({ ...projectInfo, imageAutor: value });
+    } else if (id === "image") {
+      setProjectInfo({ ...projectInfo, image: value });
+    } else if (id === "photo") {
+      setProjectInfo({ ...projectInfo, photo: value });
     }
   };
 
   const handleSubmitForm = () => {
-    console.log("click");
+    fetch("https://dev.adalab.es/api/projectCard", {
+      method: "POST",
+      body: JSON.stringify(projectInfo),
+      header: {
+        "Content-type": "application/json",
+      },
+    }).then((data) => {
+      setUrlCard(data.url);
+      console.log(urlCard);
+    });
   };
 
   return (

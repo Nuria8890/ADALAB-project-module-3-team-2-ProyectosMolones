@@ -6,12 +6,12 @@ function Form({ onChangeInput, onSubmitForm }) {
     onChangeInput(event.target.value, event.target.id);
   };
 
-  const handleChangeImageProject = (image) => {
-    onChangeInput(image, "imageProject");
+  const handleChangeimage = (image) => {
+    onChangeInput(image, "image");
   };
 
-  const handleChangeImageAutor = (image) => {
-    onChangeInput(image, "imageAutor");
+  const handleChangephoto = (image) => {
+    onChangeInput(image, "photo");
   };
 
   const handleSaveProyect = (event) => {
@@ -28,7 +28,7 @@ function Form({ onChangeInput, onSubmitForm }) {
           className="addForm__input"
           type="text"
           name="name"
-          id="nameProject"
+          id="name"
           placeholder="Nombre del proyecto"
           onChange={handleChangeInput}
         />
@@ -69,8 +69,8 @@ function Form({ onChangeInput, onSubmitForm }) {
         <textarea
           className="addForm__input"
           type="text"
-          name="description"
-          id="description"
+          name="desc"
+          id="desc"
           placeholder="Descripción"
           rows="5"
           onChange={handleChangeInput}
@@ -100,28 +100,28 @@ function Form({ onChangeInput, onSubmitForm }) {
       <fieldset className="addForm__group--upload">
         <label htmlFor="image" className="button">
           <GetAvatar
-            onChangeInput={handleChangeImageProject}
+            onChangeInput={handleChangeimage}
             text="Subir foto del proyecto"
           />
         </label>
         <input
           className="addForm__hidden"
           type="file"
-          name="imageProject"
-          id="imageProject"
+          name="image"
+          id="image"
         />
 
         <label htmlFor="photo" className="button">
           <GetAvatar
-            onChangeInput={handleChangeImageAutor}
+            onChangeInput={handleChangephoto}
             text="Subir foto de la autora"
           />
         </label>
         <input
           className="addForm__hidden"
           type="file"
-          name="imageAutor"
-          id="imageAutor"
+          name="photo"
+          id="photo"
         />
         <button onClick={handleSaveProyect} className="button--large">
           Guardar proyecto

@@ -5,7 +5,7 @@ function Preview({ projectInfo }) {
     <section className="preview">
       <div
         className="projectImage"
-        style={{ backgroundImage: `url(${projectInfo.imageProject})` }}
+        style={{ backgroundImage: `url(${projectInfo.image})` }}
       ></div>
       <article className="card">
         <h2 className="card__projectTitle">
@@ -17,16 +17,16 @@ function Preview({ projectInfo }) {
         <div className="card__author">
           <div
             className="card__authorPhoto"
-            style={{ backgroundImage: `url(${projectInfo.imageAutor})` }}
+            style={{ backgroundImage: `url(${projectInfo.photo})` }}
           ></div>
           <p className="card__job">{projectInfo.job}</p>
           <h3 className="card__name">{projectInfo.autor}</h3>
         </div>
 
         <div className="card__project">
-          <h3 className="card__name">{projectInfo.nameProject}</h3>
+          <h3 className="card__name">{projectInfo.name}</h3>
           <p className="card__slogan">{projectInfo.slogan}</p>
-          <p className="card__description">{projectInfo.description}</p>
+          <p className="card__description">{projectInfo.desc}</p>
 
           <div className="card__technicalInfo">
             <p className="card__technologies">{projectInfo.tech}</p>
