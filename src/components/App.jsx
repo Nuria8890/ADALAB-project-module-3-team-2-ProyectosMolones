@@ -51,7 +51,7 @@ function App() {
     fetch("https://dev.adalab.es/api/projectCard", {
       method: "POST",
       body: JSON.stringify(projectInfo),
-      header: {
+      headers: {
         "Content-type": "application/json",
       },
     }).then((data) => {
