@@ -29,7 +29,7 @@ function Preview({ projectInfo }) {
           <p className="card__description">{projectInfo.desc}</p>
 
           <div className="card__technicalInfo">
-            <p className="card__technologies">{projectInfo.tech}</p>
+            <p className="card__technologies">{projectInfo.technologies}</p>
 
             <a
               className="icon icon__www"
