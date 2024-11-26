@@ -175,6 +175,9 @@
     #0f201e 92%
   );
   border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+
 }
 
 .addForm .title {
@@ -370,4 +373,11 @@
 
 .icon__github {
   background-image: url("../../images/icons/github.svg");
+}
+
+.form__link{
+  color: white;
+  text-align: center;
+  padding-bottom: 1rem;
+  font-size: 1.2rem;
 }

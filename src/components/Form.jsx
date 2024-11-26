@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import GetAvatar from "./GetAvatar";
 
-function Form({ onChangeInput, onSubmitForm }) {
+function Form({ onChangeInput, onSubmitForm, urlCard }) {
   const handleChangeInput = (event) => {
     onChangeInput(event.target.value, event.target.id);
   };
@@ -127,6 +127,7 @@ function Form({ onChangeInput, onSubmitForm }) {
           Guardar proyecto
         </button>
       </fieldset>
+      <a className="form__link" href={urlCard}>Ver proyecto</a>
     </form>
   );
 }
@@ -136,4 +137,5 @@ export default Form;
 Form.propTypes = {
   onChangeInput: PropTypes.func.isRequired,
   onSubmitForm: PropTypes.func.isRequired,
+  urlCard: PropTypes.string.isRequired,
 };

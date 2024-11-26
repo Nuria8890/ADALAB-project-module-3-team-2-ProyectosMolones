@@ -68,6 +68,7 @@ function App() {
           projectInfo={projectInfo}
           onChangeInput={handleValuesProject}
           onSubmitForm={handleSubmitForm}
+          urlCard={urlCard}
         />
       </div>
       <Footer />
