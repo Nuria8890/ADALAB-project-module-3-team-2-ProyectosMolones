@@ -11,14 +11,14 @@ function App() {
   const [projectInfo, setProjectInfo] = useState({
     name: "Elegant workspace",
     slogan: "Diseños Exclusivos",
-    repo: "GitHub Link",
-    demo: "Web Link",
     technologies: "React JS - HTML - CSS",
+    demo: "Web Link",
+    repo: "GitHub Link",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Autem, dolorem mollitia.Ullam aliquid",
     autor: "Emmelie Bjôrklund",
     job: "Full stack Developer",
-    image: imgProject,
-    photo: imgAutor,
+    image: { imgProject },
+    photo: { imgAutor },
   });
 
   const [urlCard, setUrlCard] = useState("");
@@ -41,9 +41,15 @@ function App() {
     } else if (id === "job") {
       setProjectInfo({ ...projectInfo, job: value });
     } else if (id === "image") {
-      setProjectInfo({ ...projectInfo, image: value });
+      setProjectInfo({
+        ...projectInfo,
+        image: value,
+      });
     } else if (id === "photo") {
-      setProjectInfo({ ...projectInfo, photo: value });
+      setProjectInfo({
+        ...projectInfo,
+        photo: value,
+      });
     }
   };
 
