@@ -6,7 +6,8 @@ import Main from "./Main";
 import Footer from "./Footer";
 import { useState } from "react";
 import localStorage from "../services/localStorage";
-// import { Link, Route, Routes } from "react-router-dom";
+import Landing from "./Landing";
+import { Link, Route, Routes } from "react-router-dom";
 
 function App() {
   const [projectInfo, setProjectInfo] = useState({
@@ -28,27 +29,37 @@ function App() {
     if (id === "name") {
       setProjectInfo({ ...projectInfo, name: localStorage.set("name", value) });
     } else if (id === "slogan") {
-      setProjectInfo({ ...projectInfo, slogan: localStorage.set("slogan", value) });
+      setProjectInfo({
+        ...projectInfo,
+        slogan: localStorage.set("slogan", value),
+      });
     } else if (id === "repo") {
       setProjectInfo({ ...projectInfo, repo: localStorage.set("repo", value) });
     } else if (id === "demo") {
       setProjectInfo({ ...projectInfo, demo: localStorage.set("demo", value) });
     } else if (id === "technologies") {
-      setProjectInfo({ ...projectInfo, technologies: localStorage.set("technologies", value) });
+      setProjectInfo({
+        ...projectInfo,
+        technologies: localStorage.set("technologies", value),
+      });
     } else if (id === "desc") {
       setProjectInfo({ ...projectInfo, desc: localStorage.set("desc", value) });
     } else if (id === "autor") {
-      setProjectInfo({ ...projectInfo, autor: localStorage.set("autor", value) });
+      setProjectInfo({
+        ...projectInfo,
+        autor: localStorage.set("autor", value),
+      });
     } else if (id === "job") {
       setProjectInfo({ ...projectInfo, job: localStorage.set("job", value) });
     } else if (id === "image") {
       setProjectInfo({
         ...projectInfo,
-        image: localStorage.set("image", value) });
+        image: localStorage.set("image", value),
+      });
     } else if (id === "photo") {
       setProjectInfo({
         ...projectInfo,
-        photo: localStorage.set("photo", value)
+        photo: localStorage.set("photo", value),
       });
     }
   };
@@ -73,16 +84,26 @@ function App() {
   console.log("urlCard", urlCard);
   return (
     <>
-      <div className="container">
-        <Header />
-        <Main
-          projectInfo={projectInfo}
-          onChangeInput={handleValuesProject}
-          onSubmitForm={handleSubmitForm}
-          urlCard={urlCard}
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route
+          path="/main"
+          element={
+            <>
+              <div className="container">
+                <Header />
+                <Main
+                  projectInfo={projectInfo}
+                  onChangeInput={handleValuesProject}
+                  onSubmitForm={handleSubmitForm}
+                  urlCard={urlCard}
+                />
+              </div>
+              <Footer />
+            </>
+          }
         />
-      </div>
-      <Footer />
+      </Routes>
     </>
   );
 }
