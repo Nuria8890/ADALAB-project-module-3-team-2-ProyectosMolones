@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import GetAvatar from "./GetAvatar";
 
-function Form({ onChangeInput, onSubmitForm, urlCard }) {
+function Form({ onChangeInput, onSubmitForm, urlCard, projectInfo }) {
   const handleChangeInput = (event) => {
     onChangeInput(event.target.value, event.target.id);
   };
@@ -30,6 +30,7 @@ function Form({ onChangeInput, onSubmitForm, urlCard }) {
           name="name"
           id="name"
           placeholder="Nombre del proyecto"
+          value={projectInfo.name}
           onChange={handleChangeInput}
         />
         <input
@@ -38,6 +39,7 @@ function Form({ onChangeInput, onSubmitForm, urlCard }) {
           name="slogan"
           id="slogan"
           placeholder="Slogan"
+          value={projectInfo.slogan}
           onChange={handleChangeInput}
         />
         <div className="addForm__2col">
@@ -47,6 +49,7 @@ function Form({ onChangeInput, onSubmitForm, urlCard }) {
             name="repo"
             id="repo"
             placeholder="Repositorio (copia y pega la url)"
+            value={projectInfo.repo}
             onChange={handleChangeInput}
           />
           <input
@@ -55,6 +58,7 @@ function Form({ onChangeInput, onSubmitForm, urlCard }) {
             name="demo"
             id="demo"
             placeholder="Demo (copia y pega la url)"
+            value={projectInfo.demo}
             onChange={handleChangeInput}
           />
         </div>
@@ -64,6 +68,7 @@ function Form({ onChangeInput, onSubmitForm, urlCard }) {
           name="technologies"
           id="technologies"
           placeholder="Tecnologías"
+          value={projectInfo.technologies}
           onChange={handleChangeInput}
         />
         <textarea
@@ -72,6 +77,7 @@ function Form({ onChangeInput, onSubmitForm, urlCard }) {
           name="desc"
           id="desc"
           placeholder="Descripción"
+          value={projectInfo.desc}
           rows="5"
           onChange={handleChangeInput}
         ></textarea>
@@ -85,6 +91,7 @@ function Form({ onChangeInput, onSubmitForm, urlCard }) {
           name="autor"
           id="autor"
           placeholder="Nombre"
+          value={projectInfo.autor}
           onChange={handleChangeInput}
         />
         <input
@@ -93,6 +100,7 @@ function Form({ onChangeInput, onSubmitForm, urlCard }) {
           name="job"
           id="job"
           placeholder="Trabajo"
+          value={projectInfo.job}
           onChange={handleChangeInput}
         />
       </fieldset>
@@ -140,4 +148,5 @@ Form.propTypes = {
   onChangeInput: PropTypes.func.isRequired,
   onSubmitForm: PropTypes.func.isRequired,
   urlCard: PropTypes.string.isRequired,
+  projectInfo: PropTypes.object.isRequired,
 };
