@@ -15,7 +15,7 @@ function Header() {
           src={laptopCodeSolid}
           alt="Logo proyectos molones"
         />
-        <h1 className="header__title">Proyectos molones</h1>
+        <h1 className="header__title">4Code</h1>
       </a>
       <Logo />
     </header>
