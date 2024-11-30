@@ -7,7 +7,7 @@ import Footer from "./Footer";
 import { useState } from "react";
 import localStorage from "../services/localStorage";
 import Landing from "./Landing";
-import { Link, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   const [projectInfo, setProjectInfo] = useState({

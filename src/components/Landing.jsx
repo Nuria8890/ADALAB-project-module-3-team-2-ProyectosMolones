@@ -1,16 +1,25 @@
 import "../styles/layout/Landing.scss";
-import Header from "./Header";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
+import adalab from "../images/adalab.png";
 function Landing() {
   return (
     <>
-      <Header />
-      <h1>4Code</h1>
-      <h4>Escaparate en línea para recoger ideas a través de la tecnología</h4>
-      <Link to="/main">
-        <a href="">Comenzar</a>
-      </Link>
+      <div className="logo-adalab">
+        <img className="logoSponsor" src={adalab} alt="Logo Adalab" />
+      </div>
+      <section className="container-landing">
+        <h1 className="title-landing">4Code</h1>
+        <p className="subtitle">
+          Escaparate en línea para recoger ideas a través de la tecnología
+        </p>
+        <div className="button btn">
+          <Link to="/main">
+            <a href="">Comenzar</a>
+          </Link>
+        </div>
+      </section>
+
       <Footer />
     </>
   );
