@@ -5,7 +5,6 @@ import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
 import { useState } from "react";
-import localStorage from "../services/localStorage";
 // import { Link, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -26,29 +25,30 @@ function App() {
 
   const handleValuesProject = (value, id) => {
     if (id === "name") {
-      setProjectInfo({ ...projectInfo, name: localStorage.set("name", value) });
+      setProjectInfo({ ...projectInfo, name: value });
     } else if (id === "slogan") {
-      setProjectInfo({ ...projectInfo, slogan: localStorage.set("slogan", value) });
+      setProjectInfo({ ...projectInfo, slogan: value });
     } else if (id === "repo") {
-      setProjectInfo({ ...projectInfo, repo: localStorage.set("repo", value) });
+      setProjectInfo({ ...projectInfo, repo: value });
     } else if (id === "demo") {
-      setProjectInfo({ ...projectInfo, demo: localStorage.set("demo", value) });
+      setProjectInfo({ ...projectInfo, demo: value });
     } else if (id === "technologies") {
-      setProjectInfo({ ...projectInfo, technologies: localStorage.set("technologies", value) });
+      setProjectInfo({ ...projectInfo, technologies: value });
     } else if (id === "desc") {
-      setProjectInfo({ ...projectInfo, desc: localStorage.set("desc", value) });
+      setProjectInfo({ ...projectInfo, desc: value });
     } else if (id === "autor") {
-      setProjectInfo({ ...projectInfo, autor: localStorage.set("autor", value) });
+      setProjectInfo({ ...projectInfo, autor: value });
     } else if (id === "job") {
-      setProjectInfo({ ...projectInfo, job: localStorage.set("job", value) });
+      setProjectInfo({ ...projectInfo, job: value });
     } else if (id === "image") {
       setProjectInfo({
         ...projectInfo,
-        image: localStorage.set("image", value) });
+        image: value,
+      });
     } else if (id === "photo") {
       setProjectInfo({
         ...projectInfo,
-        photo: localStorage.set("photo", value)
+        photo: value,
       });
     }
   };
