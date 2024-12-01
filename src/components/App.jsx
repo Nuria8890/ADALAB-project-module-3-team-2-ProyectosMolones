@@ -98,8 +98,8 @@ function App() {
                   onSubmitForm={handleSubmitForm}
                   urlCard={urlCard}
                 />
+                <Footer />
               </div>
-              <Footer />
             </>
           }
         />
