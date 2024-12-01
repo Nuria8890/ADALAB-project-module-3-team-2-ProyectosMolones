@@ -6,7 +6,8 @@ import Main from "./Main";
 import Footer from "./Footer";
 import { useState } from "react";
 import localStorage from "../services/localStorage";
-// import { Link, Route, Routes } from "react-router-dom";
+import Landing from "./Landing";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   const [projectInfo, setProjectInfo] = useState({
@@ -86,16 +87,26 @@ function App() {
 
   return (
     <>
-      <div className="container">
-        <Header />
-        <Main
-          projectInfo={projectInfo}
-          onChangeInput={handleValuesProject}
-          onSubmitForm={handleSubmitForm}
-          urlCard={urlCard}
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route
+          path="/main"
+          element={
+            <>
+              <div className="container">
+                <Header />
+                <Main
+                  projectInfo={projectInfo}
+                  onChangeInput={handleValuesProject}
+                  onSubmitForm={handleSubmitForm}
+                  urlCard={urlCard}
+                />
+                <Footer />
+              </div>
+            </>
+          }
         />
-      </div>
-      <Footer />
+      </Routes>
     </>
   );
 }
