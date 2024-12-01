@@ -304,6 +304,10 @@
   }
 }
 
+.form__link {
+  padding-bottom: 1rem;
+}
+
 .button {
   display: block;
   min-width: 120px;
@@ -325,6 +329,18 @@
   );
 
   cursor: pointer;
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    &:hover {
+      p {
+        border: 0.1px white solid;
+        color: #0f201e;
+        transition: 0.5s;
+      }
+    }
+  }
 }
 
 .button--large {
@@ -372,11 +388,4 @@
 
 .icon__github {
   background-image: url("../../images/icons/github.svg");
-}
-
-.form__link {
-  color: white;
-  text-align: center;
-  padding-bottom: 1rem;
-  font-size: 1.2rem;
 }

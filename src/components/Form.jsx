@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import GetAvatar from "./GetAvatar";
+import "../styles/layout/Main.scss";
 
 function Form({ onChangeInput, onSubmitForm, urlCard, projectInfo }) {
   const handleChangeInput = (event) => {
@@ -135,8 +136,8 @@ function Form({ onChangeInput, onSubmitForm, urlCard, projectInfo }) {
           Guardar proyecto
         </button>
       </fieldset>
-      <a className="form__link" href={urlCard} target="_blank">
-        {urlCard && <p>Click para ver tu proyecto</p>}
+      <a className="form__link button__link" href={urlCard} target="_blank">
+        {urlCard && <p className="button">Click para ver tu proyecto</p>}
       </a>
     </form>
   );
