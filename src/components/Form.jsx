@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import GetAvatar from "./GetAvatar";
+import localStorage from "../services/localStorage";
 import "../styles/layout/Main.scss";
 
 function Form({ onChangeInput, onSubmitForm, urlCard, projectInfo }) {
@@ -31,7 +32,7 @@ function Form({ onChangeInput, onSubmitForm, urlCard, projectInfo }) {
           name="name"
           id="name"
           placeholder="Nombre del proyecto"
-          value={projectInfo.name}
+          value={localStorage.get("name") === undefined ? "" : projectInfo.name}
           onChange={handleChangeInput}
         />
         <input
@@ -40,7 +41,7 @@ function Form({ onChangeInput, onSubmitForm, urlCard, projectInfo }) {
           name="slogan"
           id="slogan"
           placeholder="Slogan"
-          value={projectInfo.slogan}
+          value={localStorage.get("slogan") === undefined ? "" : projectInfo.slogan}
           onChange={handleChangeInput}
         />
         <div className="addForm__2col">
@@ -50,7 +51,7 @@ function Form({ onChangeInput, onSubmitForm, urlCard, projectInfo }) {
             name="repo"
             id="repo"
             placeholder="Repositorio (copia y pega la url)"
-            value={projectInfo.repo}
+            value={localStorage.get("repo") === undefined ? "" : projectInfo.repo}
             onChange={handleChangeInput}
           />
           <input
@@ -59,7 +60,7 @@ function Form({ onChangeInput, onSubmitForm, urlCard, projectInfo }) {
             name="demo"
             id="demo"
             placeholder="Demo (copia y pega la url)"
-            value={projectInfo.demo}
+            value={localStorage.get("demo") === undefined ? "" : projectInfo.demo}
             onChange={handleChangeInput}
           />
         </div>
@@ -69,7 +70,7 @@ function Form({ onChangeInput, onSubmitForm, urlCard, projectInfo }) {
           name="technologies"
           id="technologies"
           placeholder="Tecnologías"
-          value={projectInfo.technologies}
+          value={localStorage.get("technologies") === undefined ? "" : projectInfo.technologies}
           onChange={handleChangeInput}
         />
         <textarea
@@ -78,7 +79,7 @@ function Form({ onChangeInput, onSubmitForm, urlCard, projectInfo }) {
           name="desc"
           id="desc"
           placeholder="Descripción"
-          value={projectInfo.desc}
+          value={localStorage.get("desc") === undefined ? "" : projectInfo.desc}
           rows="5"
           onChange={handleChangeInput}
         ></textarea>
@@ -92,7 +93,7 @@ function Form({ onChangeInput, onSubmitForm, urlCard, projectInfo }) {
           name="autor"
           id="autor"
           placeholder="Nombre"
-          value={projectInfo.autor}
+          value={localStorage.get("autor") === undefined ? "" : projectInfo.autor}
           onChange={handleChangeInput}
         />
         <input
@@ -101,7 +102,7 @@ function Form({ onChangeInput, onSubmitForm, urlCard, projectInfo }) {
           name="job"
           id="job"
           placeholder="Trabajo"
-          value={projectInfo.job}
+          value={localStorage.get("job") === undefined ? "" : projectInfo.job}
           onChange={handleChangeInput}
         />
       </fieldset>
